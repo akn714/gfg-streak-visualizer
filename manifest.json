@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "GeeksForGeeks Streak Counter",
+  "version": "1.0",
+  "description": "Counts and displays the streak on GeeksForGeeks",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.geeksforgeeks.org/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
