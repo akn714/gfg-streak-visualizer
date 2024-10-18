@@ -12,8 +12,8 @@ function displayStreak(streak) {
     streakDisplay.id = 'gfg-streak-display';
     streakDisplay.style.cssText = `
         position: fixed;
-        top: 10px;
-        right: 10px;
+        top: 5px;
+        right: 20rem;
         background-color: #4CAF50;
         color: white;
         padding: 10px;
@@ -29,10 +29,10 @@ function checkForCalHeatmap() {
     const observer = new MutationObserver((mutations, obs) => {
         const calHeatmap = document.getElementsByClassName('ch-subdomain-bg')[365];
         if (calHeatmap) {
-            setInterval(() => {
+            // setInterval(() => {
                 const streak = gfg_streak();
                 displayStreak(streak);
-            }, 1000);
+            // }, 1000);
             obs.disconnect();
         }
     });
